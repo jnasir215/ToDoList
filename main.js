@@ -35,6 +35,10 @@ window.addEventListener('load', () => {
         const taskActionsElement = document.createElement("div");
         taskActionsElement.classList.add("actions");
 
+        const taskCompleteElement = document.createElement("button");
+        taskCompleteElement.classList.add("complete");
+        taskCompleteElement.innerHTML = "Complete";
+
         const taskEditElement = document.createElement("button");
         taskEditElement.classList.add("edit");
         taskEditElement.innerHTML = "Edit";
@@ -43,6 +47,7 @@ window.addEventListener('load', () => {
         taskDeleteElement.classList.add("delete");
         taskDeleteElement.innerHTML = "Delete";
 
+        taskActionsElement.appendChild(taskCompleteElement);
         taskActionsElement.appendChild(taskEditElement);
         taskActionsElement.appendChild(taskDeleteElement);
 
@@ -51,6 +56,12 @@ window.addEventListener('load', () => {
         listElement.appendChild(taskElement);
 
         input.value = "";
+
+        taskCompleteElement.addEventListener('click', () => {
+            //if(taskActionsElement.textDecoration != "line-through") {
+            //    taskActionsElement.textDecoration == "line-through";
+            //}
+        })
 
         taskEditElement.addEventListener('click', () => {
             if(taskEditElement.innerText.toLowerCase() == "edit") {

@@ -115,6 +115,7 @@ main {
     width: 100%;
     display: block;
     transition: 0.4s;
+    text-decoration: none;
 }
 
 #tasks .task .content .text:not(:read-only) {
@@ -124,6 +125,7 @@ main {
 #tasks .task .actions {
     display: flex;
     margin: 0 -0.5rem;
+    text-decoration: none;
 }
 
 .task .actions button {
